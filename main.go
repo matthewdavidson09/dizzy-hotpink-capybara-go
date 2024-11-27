@@ -1,26 +1,22 @@
 package main
 
 import (
+	"animal-hash-digest/server"
 	"flag"
 	"fmt"
-	"os"
-
-	"animal-hash-digest/generator"
 )
 
 func main() {
-	// Define a command-line argument for the number of hostnames to generate
-	count := flag.Int("count", 1, "Number of hostnames to generate")
+	// Define command-line arguments
+	port := flag.String("port", "8080", "Port number for the HTTP server")
+	endpoint := flag.String("endpoint", "/hostname", "API endpoint for generating hostnames")
 	flag.Parse()
 
-	// Validate the argument
-	if *count <= 0 {
-		fmt.Println("Please specify a positive number for the count.")
-		os.Exit(1)
-	}
+	// Print configuration for debugging
+	fmt.Printf("Starting server on port %s with endpoint %s\n", *port, *endpoint)
 
-	// Generate and print hostnames
-	for i := 0; i < *count; i++ {
-		fmt.Println(generator.GenerateHostname())
+	// Start the server with the specified port and endpoint
+	if err := server.Start(*port, *endpoint); err != nil {
+		fmt.Printf("Error starting server: %v\n", err)
 	}
 }

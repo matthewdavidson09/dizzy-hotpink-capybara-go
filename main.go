@@ -12,7 +12,7 @@ func main() {
 	// Define command-line arguments
 	port := flag.String("port", "8080", "Port number for the HTTP server")
 	endpoint := flag.String("endpoint", "/hostname", "API endpoint for generating hostnames")
-	mode := flag.String("mode", "server", "Mode of operation: 'server' to run the HTTP server, 'direct' to run the binary directly")
+	mode := flag.String("mode", "direct", "Mode of operation: 'server' to run the HTTP server, 'direct' to run the binary directly")
 	count := flag.Int("count", 1, "Number of hostnames to generate in direct mode")
 	flag.Parse()
 
@@ -34,7 +34,6 @@ func main() {
 		os.Exit(1)
 	}
 }
-
 
 func runDirectMode(count int) {
 	// Generate and print hostnames

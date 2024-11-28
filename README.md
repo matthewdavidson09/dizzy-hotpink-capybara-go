@@ -1,4 +1,4 @@
-Here’s the updated description for your project:
+
 About Dizzy-Hotpink-Capybara
 
 The Dizzy-Hotpink-Capybara project draws inspiration from the angry-purple-tiger project by Helium. Originally written in Rust, angry-purple-tiger is a lightweight and efficient hostname generator that combines an adjective, a color, and an animal to produce unique, human-readable names. This naming convention has been widely used in Helium's ecosystem for identifying hotspots and devices.

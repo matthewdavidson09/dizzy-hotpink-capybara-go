@@ -9,14 +9,8 @@ Key Differences and Enhancements
     Language:
         The original project was written in Rust, while this version is implemented in Go for broader compatibility and integration with Go-based ecosystems.
 
-    REST API Integration:
-        Provides a web service for real-time hostname generation via HTTP requests.
-
     Customizability:
         Easily extend or modify word lists (adjectives, colors, animals) without changing core logic.
-
-    Multiple Usage Modes:
-        Supports command-line and API-based hostname generation, making it suitable for diverse use cases.
 
     Performance and Simplicity:
         While Rust excels in performance, Go's concurrency model and simplicity make it an ideal choice for scalable, maintainable backend tools.

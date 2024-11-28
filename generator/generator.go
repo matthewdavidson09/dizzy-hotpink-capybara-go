@@ -2,13 +2,10 @@ package generator
 
 import (
 	"math/rand"
-	"time"
 )
 
 // GenerateHostname generates a random hostname by combining words from the lists
 func GenerateHostname() string {
-	rand.Seed(time.Now().UnixNano())
-
 	// Shuffle slices for randomness
 	shuffle(Adjectives)
 	shuffle(Colors)

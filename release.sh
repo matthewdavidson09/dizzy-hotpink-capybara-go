@@ -28,7 +28,6 @@ fi
 platforms=(
     "linux/amd64"
     "linux/arm64"
-    "darwin/amd64"
     "windows/amd64"
 )
 
